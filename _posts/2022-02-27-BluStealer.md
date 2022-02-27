@@ -8,7 +8,6 @@ comments: false
 
 ---
 
-# BluStealer
 - creator: unknown
 - type: stealer, keylogger
 - references:
@@ -42,7 +41,7 @@ comments: false
 
 
 ## SIEM
-"AppData\Roaming\Microsoft\Windows\Templates\credentials.txt"
+Windows Sysmon :: Target_Filename: "AppData\Roaming\Microsoft\Windows\Templates\credentials.txt"
 
 ## IDS
 ```alert smtp $HOME_NET any -> $EXTERNAL_NET any (msg:"BluStealer SMTP Exfiltration"; flow:established, to_server; content:"Subject|3a 20|Passwords|3a 3a 3a 3a|"; nocase; fast_pattern; content:"X-MimeOLE|3a 20|"; tag:session,5,packets; reference:url, decoded.avast.io/anhho/blustealer/; classtype:trojan-activity; sid:900442; rev:1; metadata: created_at 2021-09-28, updated_at 2021-09-28, mitre_tactic_id TA0010, mitre_tactic_name Exfiltration, mitre_technique_id T1567, mitre_technique_name Exfiltration_Over_Web_Service;)```
