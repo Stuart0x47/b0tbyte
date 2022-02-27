@@ -83,7 +83,7 @@ theme_mode: dark  # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://gamepedia.cursecdn.com/futuramaworldsoftomorrow_gamepedia_en/thumb/4/4b/Planet_Chapek_9.png/238px-Planet_Chapek_9.png?version=8e315c83b1de33608c51cf0b45718b7b
 
 # boolean type, the global switch for ToC in posts.
 toc: true
